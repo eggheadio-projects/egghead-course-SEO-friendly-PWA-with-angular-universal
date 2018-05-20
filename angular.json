@@ -122,5 +122,13 @@
       }
     }
   },
-  "defaultProject": "store"
+  "defaultProject": "store",
+  "schematics": {
+    "@schematics/angular": {
+      "component": {
+        "inlineStyle": true,
+        "inlineTemplate": true
+      }
+    }
+  }
 }
