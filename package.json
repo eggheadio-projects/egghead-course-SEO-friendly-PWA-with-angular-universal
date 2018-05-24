@@ -7,7 +7,21 @@
     "build": "ng build store --prod && ng run store:server:production",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "now-build": "true",
+    "now": "now deploy && now alias"
+  },
+  "now": {
+    "name": "egghead-store",
+    "alias": [
+      "egghead-store.now.sh"
+    ],
+    "files": [
+      "dist",
+      "package.json",
+      "server.ts",
+      "tsconfig.json"
+    ]
   },
   "private": true,
   "dependencies": {
@@ -24,6 +38,7 @@
     "@nguniversal/express-engine": "^6.0.0",
     "@nguniversal/module-map-ngfactory-loader": "^6.0.0",
     "core-js": "^2.5.4",
+    "now": "^11.1.13",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
   },
